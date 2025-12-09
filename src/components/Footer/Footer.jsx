@@ -83,7 +83,7 @@ const Footer = () => {
 
                     <div className="footer-bottom-content">
                         <p className="copyright">
-                            © 2024 StyleHub. All rights reserved.
+                            © 2025-2026 StyleHub. All rights reserved.
                         </p>
                         <div className="footer-bottom-links">
                             <a href="#">Privacy Policy</a>

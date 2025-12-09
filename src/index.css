@@ -7,6 +7,12 @@
 @import './pages/NewArrivals.css';
 @import './pages/Sale.css';
 @import './pages/Blog.css';
+@import './pages/beauty-health.css';
+@import './pages/electronics.css';
+@import './pages/home-living.css';
+@import './pages/mens-fashion.css';
+@import './pages/sports-outdoors.css';
+@import './pages/womens-wear.css';
 
 :root {
   /* Dark Theme Color */

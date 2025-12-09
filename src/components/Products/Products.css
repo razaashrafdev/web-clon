@@ -131,9 +131,9 @@
 }
 
 .wishlist-btn:hover {
-  background: var(--accent-danger);
+  background: var(--accent-warning);
   color: white;
-  border-color: var(--accent-danger);
+  border-color: var(--accent-warning);
   transform: scale(1.1);
 }
 

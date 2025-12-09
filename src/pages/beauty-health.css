@@ -1,0 +1,12 @@
+.beauty-health-page .category-title {
+    padding: 2rem 0 0 0.5rem;
+    font-size: var(--font-3xl);
+    color: var(--text-primary);
+}
+
+.beauty-health-page .categories-grid {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}

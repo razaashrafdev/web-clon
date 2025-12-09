@@ -84,7 +84,7 @@
 }
 
 .category-header {
-    padding: 2rem 2rem 0;
+    padding: 2rem 2rem 0 ;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -133,6 +133,14 @@
     letter-spacing: 0.05em;
 }
 
+.subcategories h4 {
+    padding: 0 2rem;
+}
+
+.subcategory-list {
+    margin: 2rem;
+}
+
 .subcategories-list {
     display: flex;
     flex-wrap: wrap;
@@ -140,6 +148,7 @@
 }
 
 .subcategory-tag {
+    margin-right: 1rem;
     background: var(--bg-tertiary);
     color: var(--text-secondary);
     padding: 0.5rem 1rem;
@@ -177,8 +186,10 @@
 }
 
 .category-actions {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .featured-categories {

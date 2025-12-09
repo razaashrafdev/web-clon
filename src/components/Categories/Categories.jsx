@@ -1,8 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Categories.css';
 import { FiArrowRight } from 'react-icons/fi';
+import CategoriesCard from '../common/categories-card/categories-card';
 
 const Categories = () => {
+    const navigate = useNavigate();
+
     const categories = [
         { id: 1, name: "Men's Fashion", count: "120 items", color: "#4299e1" },
         { id: 2, name: "Women's Wear", count: "245 items", color: "#ed64a6" },
@@ -12,32 +16,24 @@ const Categories = () => {
         { id: 6, name: "Beauty & Health", count: "92 items", color: "#f56565" },
     ];
 
+    const handleViewAllClick = () => {
+        navigate('/categories');
+    };
+
     return (
         <section className="categories">
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Shop by Category</h2>
                     <p className="section-subtitle">Browse through our wide range of categories</p>
-                    <a href="#" className="view-all">
+                    <button className="view-all" onClick={handleViewAllClick}>
                         View All <FiArrowRight />
-                    </a>
+                    </button>
                 </div>
 
                 <div className="categories-grid">
-                    {categories.map((category) => (
-                        <div key={category.id} className="category-card">
-                            <div
-                                className="category-icon"
-                                style={{ backgroundColor: `${category.color}20`, color: category.color }}
-                            >
-                                <div className="icon-placeholder">C</div>
-                            </div>
-                            <h3 className="category-name">{category.name}</h3>
-                            <p className="category-count">{category.count}</p>
-                            <button className="category-btn">
-                                Explore <FiArrowRight />
-                            </button>
-                        </div>
+                    {categories.map(category => (
+                        <CategoriesCard key={category.id} category={category} />
                     ))}
                 </div>
             </div>

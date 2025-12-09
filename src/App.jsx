@@ -9,6 +9,12 @@ import Categories from './pages/Categories';
 import NewArrivals from './pages/NewArrivals';
 import Sale from './pages/Sale';
 import Blog from './pages/Blog';
+import MensFashionPage from './pages/MensFashionPage';
+import WomensWearPage from './pages/WomensWearPage';
+import ElectronicsPage from './pages/ElectronicsPage';
+import HomeLivingPage from './pages/HomeLivingPage';
+import BeautyHealthPage from './pages/BeautyHealthPage';
+import SportsOutdoorsPage from './pages/SportsOutdoorsPage';
 
 function App() {
   return (
@@ -17,12 +23,24 @@ function App() {
         <Header />
         <main>
           <Routes>
+            {/* General Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/new-arrivals" element={<NewArrivals />} />
             <Route path="/sale" element={<Sale />} />
             <Route path="/blog" element={<Blog />} />
+
+            {/* Category-Specific Routes */}
+            <Route path="/mens-fashion" element={<MensFashionPage />} />
+            <Route path="/womens-wear" element={<WomensWearPage />} />
+            <Route path="/electronics" element={<ElectronicsPage />} />
+            <Route path="/home-living" element={<HomeLivingPage />} />
+            <Route path="/beauty-health" element={<BeautyHealthPage />} />
+            <Route path="/sports-outdoors" element={<SportsOutdoorsPage />} />
+
+            {/* Categories page route */}
+            <Route path="/categories" element={<Categories />} />
           </Routes>
         </main>
         <Footer />

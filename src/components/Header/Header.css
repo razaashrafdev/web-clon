@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1.5rem;
   height: 80px;
   position: relative;
 }
@@ -203,21 +203,7 @@
   border: 2px solid var(--bg-primary);
 }
 
-@media (max-width: 1024px) {
-  .nav-list {
-    gap: 1.5rem;
-  }
-
-  .search-box input {
-    width: 200px;
-  }
-
-  .search-box input:focus {
-    width: 220px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 999px) {
   .header-container {
     height: 72px;
     padding: 0.75rem 0;
