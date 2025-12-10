@@ -1,58 +1,10 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import './Categories.css';
+import { categories } from '../../utils/categories';
 
 const Categories = () => {
-    const categories = [
-        {
-            id: 1,
-            name: "Men's Fashion",
-            description: "Premium clothing and accessories for men",
-            items: 245,
-            subcategories: ["Shirts", "T-Shirts", "Pants", "Jackets", "Accessories"],
-            link: "/mens-fashion"
-        },
-        {
-            id: 2,
-            name: "Women's Wear",
-            description: "Trendy fashion for women",
-            items: 389,
-            subcategories: ["Dresses", "Tops", "Bottoms", "Outerwear", "Accessories"],
-            link: "/womens-wear"
-        },
-        {
-            id: 3,
-            name: "Electronics",
-            description: "Latest gadgets and devices",
-            items: 156,
-            subcategories: ["Headphones", "Wearables", "Chargers", "Speakers", "Cases"],
-            link: "/electronics"
-        },
-        {
-            id: 4,
-            name: "Home & Living",
-            description: "Home decor and essentials",
-            items: 178,
-            subcategories: ["Decor", "Kitchen", "Bedding", "Furniture", "Lighting"],
-            link: "/home-living"
-        },
-        {
-            id: 5,
-            name: "Beauty & Health",
-            description: "Skincare and wellness products",
-            items: 134,
-            subcategories: ["Skincare", "Makeup", "Haircare", "Fragrances", "Wellness"],
-            link: "/beauty-health"
-        },
-        {
-            id: 6,
-            name: "Sports & Outdoors",
-            description: "Gear for active lifestyle",
-            items: 92,
-            subcategories: ["Fitness", "Camping", "Cycling", "Swimming", "Team Sports"],
-            link: "/sports-outdoors"
-        },
-    ];
 
     return (
         <div className="categories-page">
@@ -75,7 +27,7 @@ const Categories = () => {
                             <div className="subcategories">
                                 <h4>Popular Subcategories</h4>
                                 <div className="subcategory-list">
-                                    {category.subcategories.map((sub, index) => (
+                                    {category.subcategories?.map((sub, index) => (
                                         <span key={index} className="subcategory-tag">{sub}</span>
                                     ))}
                                 </div>
