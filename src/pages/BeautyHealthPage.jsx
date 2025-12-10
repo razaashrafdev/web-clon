@@ -1,17 +1,18 @@
 import React from 'react';
 import ProductsCard from '../components/common/productc-card/products-card';
 import './beauty-health.css';
-import { beautyHealthData } from '../../utils/beautyhealthdata';
+import { categories } from '../../utils/categories';
 
 
 const BeautyHealthPage = () => {
     return (
         <div className="beauty-health-page">
-            <header className="category-header">
-                <h2 className="category-title">Beauty & Health</h2>
-            </header>
+            <div className="page-header head">
+                <h1 className="page-title">Beauty And Health Categories</h1>
+                <p className="page-subtitle">Discover the best in beauty and health, tailored for your needs.</p>
+            </div>
             <section className="categories-grid">
-                {beautyHealthData.map((product) => (
+                {categories.map((product) => (
                     <ProductsCard key={product.id} product={product} />
                 ))}
             </section>

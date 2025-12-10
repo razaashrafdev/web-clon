@@ -1,16 +1,17 @@
 import React from 'react';
 import ProductsCard from '../components/common/productc-card/products-card';
 import './womens-wear.css';
-import { womensWearData } from '../../utils/womenweardata';
+import { categories } from '../../utils/categories';
 
 const WomensWearPage = () => {
     return (
         <div className="womens-wear-page">
-            <header className="category-header">
-                <h2 className="category-title">Women's Wear</h2>
-            </header>
+            <div className="page-header head">
+                <h1 className="page-title">Women Wear Categories</h1>
+                <p className="page-subtitle">Explore the latest in women's fashion, perfect for every occasion.</p>
+            </div>
             <section className="categories-grid">
-                {womensWearData.map((product) => (
+                {categories.map((product) => (
                     <ProductsCard key={product.id} product={product} />
                 ))}
             </section>

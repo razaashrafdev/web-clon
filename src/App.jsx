@@ -9,8 +9,7 @@ import Categories from './pages/Categories';
 import NewArrivals from './pages/NewArrivals';
 import Sale from './pages/Sale';
 import Blog from './pages/Blog.jsx';
-import ProductPage from './pages/ProductPage.jsx'; 
-import CategoryPage from './pages/CategoryPage.jsx';
+import DynamicPage from './pages/DynamicPage.jsx';
 
 function App() {
   return (
@@ -27,9 +26,7 @@ function App() {
             <Route path="/sale" element={<Sale />} />
             <Route path="/blog" element={<Blog />} />
 
-            <Route path="/:categoryName" element={<CategoryPage />} />
-
-            <Route path="/:productId" element={<ProductPage />} />
+            <Route path="/:type/:id" element={<DynamicPage />} />
           </Routes>
         </main>
         <Footer />
