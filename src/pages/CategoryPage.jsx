@@ -13,17 +13,17 @@ const CategoryPage = () => {
 
   const renderCategory = () => {
     switch (categoryName) {
-      case 'menfashion':
+      case 'mens-fashion':
         return <Menfashion />;
-      case 'womenwear':
+      case 'womens-wear':
         return <Womenwear />;
       case 'electronics':
         return <Electronics />;
-      case 'beautyandhealyth':
+      case 'beauty-health':
         return <BeautyandHealyh />;
-      case 'homeliving':
+      case 'home-living':
         return <Homeliving />;
-      case 'sportsandoutdoor':
+      case 'sports-outdoors':
         return <Sportsandoutdoor />;
       default:
         return <div>Category not found</div>;

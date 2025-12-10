@@ -5,6 +5,6 @@ export const categories = [
     { id: 4, name: "Footwear", slug: "footwar", count: "156 items", color: "#ed8936" },
     { id: 5, name: "Electronics", slug: "electronics", description: "Latest gadgets and devices", subcategories: ["Headphones", "Wearables", "Chargers", "Speakers", "Cases"], items: 156, count: "78 items", link: "/electronics", color: "#9f7aea" },
     { id: 6, name: "Beauty & Health", slug: "beauty-and-health", description: "Skincare and wellness products", subcategories: ["Skincare", "Makeup", "Haircare", "Fragrances", "Wellness"], items: 134, count: "92 items",link: "/beauty-health", color: "#f56565" },
-    { id: 7, name: "Home & Living", slug: "home-and-living", description: "Home decor and essentials", items: 178, subcategories: ["Decor", "Kitchen", "Bedding", "Furniture", "Lighting"], color: "#ed64a6" },
+    { id: 7, name: "Home & Living", slug: "home-and-living", description: "Home decor and essentials", items: 178, subcategories: ["Decor", "Kitchen", "Bedding", "Furniture", "Lighting"], link: "/home-living", color: "#ed64a6" },
     { id: 8, name: "Sports & Outdoors", slug: "sports-and-outdoors", description: "Gear for active lifestyle", items: 92, subcategories: ["Fitness", "Camping", "Cycling", "Swimming", "Team Sports"], link: "/sports-outdoors", color: "#48bb78" }
 ];
