@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
 import Menfashion from './MensFashionPage';
 import Womenwear from './WomensWearPage';
 import Electronics from './ElectronicsPage';
@@ -11,24 +10,16 @@ import Sportsandoutdoor from './SportsOutdoorsPage';
 const CategoryPage = () => {
   const { categoryName } = useParams();
 
-  const renderCategory = () => {
-    switch (categoryName) {
-      case 'mens-fashion':
-        return <Menfashion />;
-      case 'womens-wear':
-        return <Womenwear />;
-      case 'electronics':
-        return <Electronics />;
-      case 'beauty-health':
-        return <BeautyandHealyh />;
-      case 'home-living':
-        return <Homeliving />;
-      case 'sports-outdoors':
-        return <Sportsandoutdoor />;
-      default:
-        return <div>Category not found</div>;
-    }
+  const categoryComponents = {
+    'mens-fashion': <Menfashion />,
+    'womens-wear': <Womenwear />,
+    'electronics': <Electronics />,
+    'beauty-health': <BeautyandHealyh />,
+    'homeliving': <Homeliving />,
+    'sports-outdoors': <Sportsandoutdoor />
   };
+
+  const renderCategory = () => categoryComponents[categoryName] || <div>Category not found</div>;
 
   return (
     <div>

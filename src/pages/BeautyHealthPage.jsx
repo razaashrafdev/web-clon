@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductsCard from '../components/common/productc-card/products-card';
+import ProductsPage from '../components/common/productc-card/products-card';
 import './beauty-health.css';
 import { categories } from '../../utils/categories';
 
@@ -13,7 +13,7 @@ const BeautyHealthPage = () => {
             </div>
             <section className="categories-grid">
                 {categories.map((product) => (
-                    <ProductsCard key={product.id} product={product} />
+                    <ProductsPage key={product.id} product={product} />
                 ))}
             </section>
         </div>
