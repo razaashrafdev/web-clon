@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../Categories/Categories.css';
 import { FiArrowRight } from 'react-icons/fi';
 
 const CategoriesCard = ({ category }) => {
+    const targetLink = category.link || `/${category.id}`;
+
     return (
         <div className="category-card">
             <div
@@ -13,9 +16,10 @@ const CategoriesCard = ({ category }) => {
             </div>
             <h3 className="category-name">{category.name}</h3>
             <p className="category-count">{category.count}</p>
-            <button className="category-btn">
+            
+            <Link to={targetLink} className="category-btn">
                 Explore <FiArrowRight />
-            </button>
+            </Link>
         </div>
     );
 };

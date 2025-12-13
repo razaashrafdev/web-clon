@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ProductsPage from '../components/common/productc-card/products-card.jsx';
-import { categories } from '../../utils/categories.js';
+import ProductsPage from '../../components/common/productc-card/products-card.jsx';
+import { categories } from '../../../utils/categories.js';
 
 const ProductPage = () => {
   const { productId } = useParams();

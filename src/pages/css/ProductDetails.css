@@ -1,0 +1,145 @@
+.pd-wrapper {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Arial', sans-serif;
+    padding: var(--spacing-xl) 0;
+}
+
+.pd-content {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+}
+
+.pd-info {
+    flex: 1;
+}
+
+.pd-title {
+    font-size: var(--font-3xl);
+    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    text-transform: uppercase;
+}
+
+.pd-category {
+    font-size: var(--font-lg);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pd-rating {
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+}
+
+.pd-description {
+    font-size: var(--font-base);
+    margin-top: var(--spacing-sm);
+}
+
+.pd-price {
+    font-size: var(--font-xl);
+    margin-top: var(--spacing-md);
+    display: flex;
+    align-items: center;
+}
+
+.pd-price-current {
+    color: var(--accent-primary);
+    margin-right: var(--spacing-sm);
+}
+
+.pd-price-original {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.pd-back-btn {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.pd-back-btn:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.pd-add-cart-btn {
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    border: none;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+    margin-top: var(--spacing-lg);
+}
+
+.pd-add-cart-btn:hover {
+    background-color: var(--accent-secondary);
+}
+
+.pd-quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-md);
+    background-color: var(--bg-card);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.pd-quantity-btn {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    font-size: var(--font-lg);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    border-radius: var(--radius-sm);
+}
+
+.pd-quantity-btn:hover {
+    background-color: var(--bg-hover);
+}
+
+.pd-quantity-number {
+    font-size: var(--font-lg);
+    margin: 0 var(--spacing-sm);
+    color: var(--text-primary);
+    text-align: center;
+    min-width: 40px;
+}
+
+.pd-image-box {
+    flex: 1;
+    min-width: 300px;
+    height: 500px;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.pd-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pd-loading {
+    padding: var(--spacing-xxl);
+    text-align: center;
+    color: var(--text-primary);
+}

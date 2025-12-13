@@ -1,8 +1,8 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-import './Categories.css';
-import { categories } from '../../utils/categories';
+import '../css/Categories.css';
+import { categories } from '../../../utils/categories';
 
 const Categories = () => {
 

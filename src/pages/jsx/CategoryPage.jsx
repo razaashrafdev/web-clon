@@ -6,6 +6,8 @@ import Electronics from './ElectronicsPage';
 import BeautyandHealyh from './BeautyHealthPage';
 import Homeliving from './HomeLivingPage';
 import Sportsandoutdoor from './SportsOutdoorsPage';
+import Accessories from './Accessories';
+import Footware from './Footware';
 
 const CategoryPage = () => {
   const { categoryName } = useParams();
@@ -13,9 +15,11 @@ const CategoryPage = () => {
   const categoryComponents = {
     'mens-fashion': <Menfashion />,
     'womens-wear': <Womenwear />,
+    'accessories': <Accessories />,
+    'footwear': <Footware />,
     'electronics': <Electronics />,
     'beauty-health': <BeautyandHealyh />,
-    'homeliving': <Homeliving />,
+    'home-living': <Homeliving />,
     'sports-outdoors': <Sportsandoutdoor />
   };
 

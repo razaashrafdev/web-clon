@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-@import './pages/pages.css';
-@import './pages/Home.css';
-@import './pages/Shop.css';
-@import './pages/Categories.css';
-@import './pages/NewArrivals.css';
-@import './pages/Sale.css';
-@import './pages/Blog.css';
-@import './pages/beauty-health.css';
-@import './pages/electronics.css';
-@import './pages/home-living.css';
-@import './pages/mens-fashion.css';
-@import './pages/sports-outdoors.css';
-@import './pages/womens-wear.css';
+@import './pages/css/pages.css';
+@import './pages/css/Home.css';
+@import './pages/css/Shop.css';
+@import './pages/css/Categories.css';
+@import './pages/css/NewArrivals.css';
+@import './pages/css/Sale.css';
+@import './pages/css/Blog.css';
+@import './pages/css/beauty-health.css';
+@import './pages/css/electronics.css';
+@import './pages/css/home-living.css';
+@import './pages/css/mens-fashion.css';
+@import './pages/css/sports-outdoors.css';
+@import './pages/css/womens-wear.css';
+@import './pages/css/ProductDetails.css';
 
 :root {
   /* Dark Theme Color */
@@ -21,19 +22,19 @@
   --bg-tertiary: #334155;
   --bg-card: #1e293b;
   --bg-hover: #334155;
-  
+
   /* Text Colors */
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
+
   /* Accent Colors */
   --accent-primary: #3b82f6;
   --accent-secondary: #8b5cf6;
   --accent-success: #10b981;
   --accent-warning: #f59e0b;
   --accent-danger: #ef4444;
-  
+
   /* Borders & Shadows */
   --border-color: #334155;
   --border-light: #475569;
@@ -41,7 +42,7 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -49,19 +50,23 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-xxl: 4rem;
-  
+
+  /* Base Layout Variables */
+  --sidebar-width: 260px;
+  --gap-layout: 2rem;
+
   /* Border Radius */
   --radius-sm: 0.375rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
   --radius-full: 9999px;
-  
+
   /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* Font sizes */
   --font-xs: 0.75rem;
   --font-sm: 0.875rem;
@@ -102,7 +107,12 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-primary);
@@ -228,11 +238,11 @@ p {
   .container {
     padding: 0 var(--spacing-sm);
   }
-  
+
   .section-padding {
     padding: var(--spacing-xl) 0;
   }
-  
+
   .section-title {
     font-size: var(--font-3xl);
   }
