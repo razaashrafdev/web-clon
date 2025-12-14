@@ -7,10 +7,9 @@ import Home from './pages/jsx/Home';
 import Shop from './pages/jsx/Shop';
 import Categories from './pages/jsx/Categories';
 import NewArrivals from './pages/jsx/NewArrivals';
-import Sale from './pages/jsx/Sale';
-import Blog from './pages/jsx/Blog.jsx';
 import CategoryPage from './pages/jsx/CategoryPage.jsx';
 import ProductDetails from './pages/jsx/ProductDetails.jsx';
+import ScrollToTop from './pages/jsx/ScrollToTop.jsx';
 
 function App() {
   return (
@@ -18,14 +17,13 @@ function App() {
       <div className="App">
         <Header />
         <main>
+          <ScrollToTop />
           <Routes>
             {/* General Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/categories" element={<Categories />} />
             <Route path="/new-arrivals" element={<NewArrivals />} />
-            <Route path="/sale" element={<Sale />} />
-            <Route path="/blog" element={<Blog />} />
 
             <Route path="/product/:productId" element={<ProductDetails />} />
 

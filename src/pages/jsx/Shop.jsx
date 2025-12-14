@@ -24,8 +24,7 @@ const Shop = () => {
                                 <div className="filter-options">
                                     {['Men', 'Women', 'Accessories', 'Footwear', 'Electronics', 'Beauty'].map(cat => (
                                         <label key={cat} className="filter-option">
-                                            <input type="checkbox" />
-                                            <span className="filter-checkbox"></span>
+                                            <input className="filter-checkbox" type="checkbox" />
                                             {cat}
                                         </label>
                                     ))}

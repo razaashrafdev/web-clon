@@ -9,10 +9,10 @@ const NewArrivals = () => {
 
     return (
         <div className="new-arrivals-page fade-in">
-            <div className="new-arrivals-header">
+            <div className="page-header">
                 <div className="container">
-                    <h1 className="new-arrivals-title">New Arrivals</h1>
-                    <p className="new-arrivals-subtitle">Be the first to get your hands on our latest products</p>
+                    <h1 className="page-title">New Arrivals</h1>
+                    <p className="page-subtitle">Be the first to get your hands on our latest products</p>
                     <div className="new-badge">Fresh Drops Every Week!</div>
                 </div>
             </div>

@@ -42,8 +42,6 @@ const Header = () => {
         { path: '/shop', label: 'Shop' },
         { path: '/categories', label: 'Categories' },
         { path: '/new-arrivals', label: 'New Arrivals' },
-        { path: '/sale', label: 'Sale' },
-        { path: '/blog', label: 'Blog' },
     ];
 
     return (
@@ -87,7 +85,6 @@ const Header = () => {
 
                     <button
                         className="icon-btn cart-btn"
-                        onClick={() => navigate('/shop')}
                         aria-label="Shopping cart"
                     >
                         <FiShoppingCart size={20} />
@@ -96,7 +93,6 @@ const Header = () => {
 
                     <button
                         className="icon-btn user-btn"
-                        onClick={() => navigate('/account')}
                         aria-label="User account"
                     >
                         <FiUser size={20} />
