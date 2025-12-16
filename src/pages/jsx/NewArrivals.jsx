@@ -5,7 +5,7 @@ import '../css/NewArrivals.css';
 const NewArrivals = () => {
     const [activeFilter, setActiveFilter] = useState('All New');
 
-    const filters = ["All New", "This Week", "Just Launched", "Coming Soon"];
+    const filters = ["All New", "This Week", "Just Launched", "Sale"];
 
     return (
         <div className="new-arrivals-page fade-in">
@@ -38,18 +38,18 @@ const NewArrivals = () => {
                     <h2 className="coming-soon-title">Coming Soon</h2>
                     <div className="coming-soon-list">
                         <div className="coming-soon-item">
-                            <h3>Winter Collection 2025</h3>
-                            <p>Launching on December 15</p>
+                            <h3>Winter Collection 2026</h3>
+                            <p>Launching on January 15</p>
                             <button className="notify-btn">Notify Me</button>
                         </div>
                         <div className="coming-soon-item">
                             <h3>Smart Home Devices</h3>
-                            <p>Launching on December 20</p>
+                            <p>Launching on February 20</p>
                             <button className="notify-btn">Notify Me</button>
                         </div>
                         <div className="coming-soon-item">
                             <h3>Fitness Equipment</h3>
-                            <p>Launching on December 25</p>
+                            <p>Launching on January 25</p>
                             <button className="notify-btn">Notify Me</button>
                         </div>
                     </div>

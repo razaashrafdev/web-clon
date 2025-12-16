@@ -26,13 +26,6 @@ const Hero = () => {
                         <Stats stats_num={"50K+"} stats_label={"Customers"} />
                     </div>
                 </div>
-                <div className="hero-image">
-                    <div className="image-placeholder">
-                        <div className="placeholder-content">
-                            <div className="placeholder-text"><img src="https://plus.unsplash.com/premium_photo-1664392147011-2a720f214e01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" alt="" /></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     );

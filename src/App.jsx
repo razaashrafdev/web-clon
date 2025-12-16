@@ -10,29 +10,33 @@ import NewArrivals from './pages/jsx/NewArrivals';
 import CategoryPage from './pages/jsx/CategoryPage.jsx';
 import ProductDetails from './pages/jsx/ProductDetails.jsx';
 import ScrollToTop from './pages/jsx/ScrollToTop.jsx';
+import { CartProvider } from './context/CartContext';
+import CartSidebar from './components/CartSidebar/CartSidebar';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <main>
-          <ScrollToTop />
-          <Routes>
-            {/* General Routes */}
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/new-arrivals" element={<NewArrivals />} />
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Header />
+          <CartSidebar />
+          <main>
+            <ScrollToTop />
+            <Routes>
+              {/* General Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/new-arrivals" element={<NewArrivals />} />
 
-            <Route path="/product/:productId" element={<ProductDetails />} />
-
-            <Route path="/:categoryName" element={<CategoryPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+              <Route path="/:productId" element={<ProductDetails />} />
+              <Route path="/category/:categoryName" element={<CategoryPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </CartProvider>
   );
 }
 

@@ -267,7 +267,7 @@
 
 .shop-main-content .products-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(3, 3fr) !important;
     gap: 30px;
     width: 100%;
 }

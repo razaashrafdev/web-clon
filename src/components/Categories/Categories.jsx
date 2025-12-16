@@ -17,7 +17,6 @@ const Categories = () => {
             <div className="container">
                 <div className="section-header">
                     <h2 className="section-title">Shop by Category</h2>
-                    <p className="section-subtitle">Browse through our wide range of categories</p>
                     <button className="view-all" onClick={handleViewAllClick}>
                         View All <FiArrowRight />
                     </button>

@@ -6,7 +6,31 @@
 
 .electronics-page .categories-grid {
     padding: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+    display: block;
+}
+
+.electronics-page .products-page {
+    width: 100%;
+}
+
+.electronics-page .products-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .electronics-page .products-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .electronics-page .products-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }

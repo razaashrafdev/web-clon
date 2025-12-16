@@ -203,6 +203,20 @@
   border: 2px solid var(--bg-primary);
 }
 
+.search-box {
+  position: relative;
+}
+
+.search-loader {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+}
+
+
 @media (max-width: 999px) {
   .header-container {
     height: 72px;

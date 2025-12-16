@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { FiStar, FiShoppingCart, FiHeart } from 'react-icons/fi';
 import '../../Products/Products.css';
 import { categories } from '../../../../utils/categories'; 
+import { useCart } from '../../../context/CartContext';
 
-// ------------------- Product Card -------------------
 export const ProductsCard = ({ product, removeProduct }) => {
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
+  const { addToCart } = useCart();
 
   const handleCardClick = () => {
     if (product.arrivalType === "Coming Soon") {
-      // Remove the card from parent
-      removeProduct(product.uniqueId);
+      if (removeProduct) removeProduct(product.uniqueId);
       return;
     }
     const urlId = product.uniqueId ? product.uniqueId : product.id;
-    navigate(`/product/${urlId}`);
+    navigate(`/${urlId}`);
   };
 
   const toggleWishlist = (e) => {
@@ -27,10 +27,10 @@ export const ProductsCard = ({ product, removeProduct }) => {
   const handleAddToCart = (e) => {
     e.stopPropagation();
     if (product.arrivalType === "Coming Soon") {
-      removeProduct(product.uniqueId);
+      if (removeProduct) removeProduct(product.uniqueId);
       return;
     }
-    alert("Added to cart!");
+    addToCart(product);
   };
 
   return (
@@ -71,19 +71,22 @@ export const ProductsCard = ({ product, removeProduct }) => {
           onClick={handleAddToCart}
           disabled={product.arrivalType === "Coming Soon"}
         >
-          {product.arrivalType === "Coming Soon" ? "Coming Soon" : <><FiShoppingCart size={18} /> Add</>}
+          {product.arrivalType === "Coming Soon" ? "Coming Soon" : <><FiShoppingCart size={18} /> Add To Cart</>}
         </button>
       </div>
     </div>
   );
 };
 
-// ------------------- Products Page -------------------
 const ProductsPage = ({ categorySlug, arrivalFilter }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     if (!categories) return;
+
+    const searchParams = new URLSearchParams(location.search);
+    const searchQuery = searchParams.get('search')?.toLowerCase() || '';
 
     let products = [];
 
@@ -109,7 +112,12 @@ const ProductsPage = ({ categorySlug, arrivalFilter }) => {
       }, []);
     }
 
-    // -------------- New Arrivals Filter -----------------
+    if (searchQuery) {
+        products = products.filter(product => 
+            product.name.toLowerCase().includes(searchQuery)
+        );
+    }
+
     if (arrivalFilter && arrivalFilter !== "All New") {
       products = products.filter(
         (product) => product.arrivalType === arrivalFilter
@@ -117,9 +125,9 @@ const ProductsPage = ({ categorySlug, arrivalFilter }) => {
     }
 
     setFilteredProducts(products);
-  }, [categorySlug, arrivalFilter]);
+    
+  }, [categorySlug, arrivalFilter, location.search]);
 
-  // ------------- Remove product from list -------------
   const removeProduct = (id) => {
     setFilteredProducts(prev => prev.filter(product => product.uniqueId !== id));
   };
@@ -137,7 +145,9 @@ const ProductsPage = ({ categorySlug, arrivalFilter }) => {
           ))}
         </div>
       ) : (
-        <p>No products available.</p>
+        <div style={{ textAlign: 'center', width: '100%', padding: '2rem' }}>
+          <h3>No products found matching your search.</h3>
+        </div>
       )}
     </div>
   );
